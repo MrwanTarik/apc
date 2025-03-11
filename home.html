@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APC</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="./css/bootstrap5.css">
+   <!-- calendar css -->
+   <link rel="stylesheet" href="./css/calendar.css">
+   <!-- gallery css -->
+   <link rel="stylesheet" href="./css/gallery.css">
+  <!-- home css -->
+  <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+  <!-- navbar -->
+  <header class="pt-3 pb-2">
+    <nav class="d-flex flex-column container-fluid">
+      <div class="d-md-flex d-none justify-content-between align-items-center">
+        <div class="d-flex user-info align-items-center">
+          <img src="./images/user.png" alt="user" class="user-image">
+          <span>Welcome, Adam!</span>
+        </div>
+        <div class="d-flex gap-1 align-items-center weather-info">
+          <div class="city-selector">
+            <select id="cityDropdown" class="city-dropdown">
+              <option value="212692">Amman</option>
+              <option value="221790">Zarqa</option>
+              <option value="221898">Irbid</option>
+              <option value="224033">Aqaba</option>
+              <option value="224758">Madaba</option>
+              <option value="222878">Jerash</option>
+              <option value="222903">Karak</option>
+              <option value="222209">Ajloun</option>
+              <option value="222695">Ma'an</option>
+              <option value="222163">Salt</option>
+              <option value="222544">Tafilah</option>
+              <option value="222855">Mafraq</option>
+            </select>
+            
+          </div>
+          <img id="weatherIcon" src="./images/icons/cloudy.svg" alt="cloudy" class="weather-icon">
+          <span id="temperature">23º</span>
+        </div>
+      </div>
+      <button class="mobile-menu-btn d-none">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="d-flex mt-20 justify-content-between align-items-end">
+        <div class="links">
+          <a class="active" href="#">Home</a>
+          <a href="#">Procedures</a>
+          <a href="#">Departments</a>
+          <a href="">Events</a>
+          <a href="">Announcements</a>
+          <a href="">Workflows</a>
+          <a href="">Knowledge Center</a>
+          <button class="search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12 12">
+              <path d="M691.043,382.408a4.193,4.193,0,1,1,.745-.7l3.188,3.179-.738.715Zm1.056-3.4a3.515,3.515,0,1,0-3.525,3.524A3.524,3.524,0,0,0,692.1,379.008Z" transform="translate(-683.693 -374.124)" fill="#fff"  stroke-width="1"/>
+            </svg>
+          </button>
+          <div class="d-flex flex-column d-md-none justify-content-between align-items-end">
+            <div class="d-flex user-info align-items-center">
+              <img src="./images/user.png" alt="user" class="user-image">
+              <span>Welcome, Adam!</span>
+            </div>
+            <div class="d-flex gap-1 align-items-center weather-info pt-2 pt-md-0">
+              <div class="city-selector">
+                <select id="cityDropdown" class="city-dropdown">
+                  <option value="212692">Amman</option>
+                  <option value="221790">Zarqa</option>
+                  <option value="221898">Irbid</option>
+                  <option value="224033">Aqaba</option>
+                  <option value="224758">Madaba</option>
+                  <option value="222878">Jerash</option>
+                  <option value="222903">Karak</option>
+                  <option value="222209">Ajloun</option>
+                  <option value="222695">Ma'an</option>
+                  <option value="222163">Salt</option>
+                  <option value="222544">Tafilah</option>
+                  <option value="222855">Mafraq</option>
+                </select>
+                
+              </div>
+              <img id="weatherIcon" src="./images/icons/cloudy.svg" alt="cloudy" class="weather-icon">
+              <span id="temperature">23º</span>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="logo">
+          <img class="img-fluid" src="./images/icons/logo.svg" alt="logo">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- main -->
+  <main>
+   <!-- hero -->
+   <section id="hero">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-5 row gy-3 gx-4 mt-0">
+          <div class="col-4 mt-0">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Procurement</span>
+            </div>
+          </div>
+          <div class="col-4 mt-0">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Safety</span>
+            </div>
+          </div>
+          <div class="col-4 mt-0">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Quality</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Maintenance</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Production</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Power & Water</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Human Resources</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Internal Audit </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span> Marketing </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span> Technical </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span> Information Technology </span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span> Strategic Planning</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Finance</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Expansion Project & Civil Works</span>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="department-card">
+              <img src="./images/icons/department-1.svg" alt="department-1">
+              <span>Risk Managemant</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 flex-grow-1 d-flex flex-column">
+          <div class="announcement-card">
+            <div class="content">
+              <h2>Invitation to Shareholders of Arab Potash Company PLC</h2>
+              <span>21/2/2025</span>
+              <p>APC Board of Director is pleased to announce to esteemed shareholders the distribution of dividend for the year 2017.</p>
+              <a href="#">Read more <img src="./images/icons/more-right.svg" alt="more-right"> <img src="./images/icons/more-right.svg" alt="more-right"></a>
+            </div>
+          </div>
+          <div class="all-announcements justify-content-end">
+            <a href="#">All announcements <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
+          </div>
+          <div class="d-flex department-cards">
+            <div class="col-3">
+              <div class="department-card bg-transparent p-0">
+                <img src="./images/icons/department-2.svg" alt="department-2">
+                <span>Sustainability Reports</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="department-card bg-transparent p-0">
+                <img src="./images/icons/department-3.svg" alt="department-3">
+                <span>What is Potash</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="department-card bg-transparent p-0">
+                <img src="./images/icons/department-4.svg" alt="department-4">
+                <span>Creative Ideas</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="department-card bg-transparent p-0">
+                <img src="./images/icons/department-5.svg" alt="department-5">
+                <span>Workflows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+   <!-- outlook -->
+   <section id="outlook">
+    <div class="container-fluid">
+      <div class="row justify-content-between align-items-center">
+        <div class="outlook-mails">
+          <h1 class="header-title">Outlook</h1>
+          <div class="outlook-mails-container w-100">
+            <div class="mail-card active">
+              <div class="mail-card-content">
+                <h2 class="mb-0">John Smith</h2>
+                <div class="d-flex align-items-center justify-content-between mail-date">
+                  <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>
+                  <span>24/2/2025</span>
+                </div>
+                <span>APC Board of Director is pleased to announce to esteemed shareholders the distribu...</span>
+              </div>
+            </div>
+            <div class="mail-card">
+              <div class="mail-card-content">
+                <h2 class="mb-0">John Smith</h2>
+                <div class="d-flex align-items-center justify-content-between mail-date">
+                  <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>
+                  <span>24/2/2025</span>
+                </div>
+                <span>APC Board of Director is pleased to announce to esteemed shareholders the distribu...</span>
+              </div>
+            </div>
+            <div class="mail-card">
+              <div class="mail-card-content">
+                <h2 class="mb-0">John Smith</h2>
+                <div class="d-flex align-items-center justify-content-between mail-date">
+                  <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>
+                  <span>24/2/2025</span>
+                </div>
+                <span>APC Board of Director is pleased to announce to esteemed shareholders the distribu... </span>
+              </div>
+            </div>
+          </div>
+          <div class="all-announcements mt-4">
+            <a href="#">Go to Outlook <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
+          </div>
+        </div>
+        <div class="outlook-calendar">
+          <h1 class="header-title">Calendar</h1>
+          <div class="calendar-card ">
+            <h2 class="month-header  ">June 2024</h2>
+            <div class="calendar" id="calendar"></div>
+          </div>
+          <div class="all-announcements mt-4">
+            <a href="#">All events <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+   <!-- media -->
+   <section id="gallery">
+    <div class="container-fluid">
+      <h1 class="header-title">Gallery</h1>
+      <div id="media"></div>
+    </div>
+
+    <!-- Modal/Previewer -->
+    <div class="gallery-modal" id="galleryModal">
+      <button class="close-modal">&times;</button>
+      <div class="modal-content">
+        <button class="nav-btn prev-btn">&lt;</button>
+        <div class="content-container">
+          <!-- Content will be inserted here via JavaScript -->
+        </div>
+        <button class="nav-btn next-btn">&gt;</button>
+      </div>
+    </div>
+   </section>
+   <!-- footer -->
+   <footer> 
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="mb-0">All Rights Reserved ARAB POTASH © 2025</p>
+        <button class="back-to-top d-flex align-items-center gap-2">
+          <span class="fw-bold">Back to top</span>
+          <img src="./images/icons/back-top.svg" alt="back-to-top">
+        </button>
+      </div>
+    </div>
+   </footer>
+  </main>
+  <!-- weather -->
+  <script src="./js/weather.js"></script>
+  <!-- outlook calendar -->
+  <script src="./js/outlook-calendar.js"></script>
+  <!-- gallery -->
+  <script src="./js/gallery.js"></script>
+  <!-- app -->
+  <script src="./js/app.js"></script>
+</body>
+</html>
