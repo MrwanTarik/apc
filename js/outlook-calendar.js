@@ -98,7 +98,7 @@ class Calendar {
             
             // Add icon and content container
             const tooltipContent = `
-                <div class="d-flex align-items-start gap-3">
+                <div class="d-flex align-items-center gap-3">
                     <img src="../images/icons/event-icon.svg" alt="notification">
                     <div>
                         <h3>Importance of time event</h3>

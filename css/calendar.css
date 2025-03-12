@@ -1,32 +1,32 @@
 #outlook .outlook-calendar {
   width: 100%;
-  max-width: 29.28vw; /* 400px */
+  max-width: 400px; 
 }
 #outlook .outlook-calendar .calendar-card {
-  height: 27.09vw; /* 370px */
+  height: 375px;
   background: white;
-  padding: 1.46vw 1.46vw 1.68vw; /* 20px 20px 23px */
-  border-radius: 0.95vw; /* 13px */
-  border: 0.073vw solid #999999; /* 1px */
+  padding: 20px 20px 23px;
+  border-radius: 13px;
+  border: 1px solid #999999;
   background: #F8F8F8 0% 0% no-repeat padding-box;
-  box-shadow: 0 0.146vw 0.73vw rgba(0, 0, 0, 0.05); /* 0 2px 10px */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 #outlook .outlook-calendar .month-header {
-  font-size: 2.2vw; /* 30px */
-  margin-bottom: 1.32vw; /* 18px */
+  font-size: clamp(24px, 2.19vw, 30px);
+  margin-bottom: 18px;
   font-weight: 400;
 }
 #outlook .outlook-calendar .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0.73vw; /* 10px */
+  gap: 10px;
   width: 100%;
 }
 /* Day styles */
 #outlook .outlook-calendar .weekday {
   color: #884C28;
-  font-size: 1.1vw; /* 15px */
-  padding: 0.37vw; /* 5px */
+  font-size: clamp(10px, 1.09vw, 15px);
+  padding: 5px;
 }
 
 #outlook .outlook-calendar .day {
@@ -45,7 +45,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.02vw; /* 14px - adding font size for day numbers */
+  font-size: clamp(14px, 1.02vw, 14px); 
 }
 
 #outlook .outlook-calendar .day.inactive,
@@ -92,15 +92,15 @@
 
 #outlook .outlook-calendar .day .tooltip {
   position: absolute;
-  left: -17.57vw; /* 240px */
-  top: 8.78vw; /* 120px */
+  left: -267px;
+  top: 120px;
   transform: translateY(-100%);
   background: white;
-  padding: 1.1vw; /* 15px */
-  border-radius: 0.95vw; /* 13px */
-  box-shadow: 0 0.146vw 0.73vw rgba(0, 0, 0, 0.1); /* 0 2px 10px */
+  padding: 15px;
+  border-radius: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: max-content;
-  min-width: 16.1vw; /* 220px */
+  min-width: 220px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -108,20 +108,18 @@
 }
 
 #outlook .outlook-calendar .day .tooltip img {
-  width: 1.76vw; /* 24px */
-  height: 1.76vw; /* 24px */
   color: #222222;
 }
 
 #outlook .outlook-calendar .day .tooltip h3 {
-  font-size: 1.17vw; /* 16px */
+  font-size: 16px;
   color: #FFCA3A;  /* Match the yellow color from the design */
-  margin-bottom: 0.59vw; /* 8px */
+  margin-bottom: 8px;
   font-weight: normal;
 }
 
 #outlook .outlook-calendar .day .tooltip p {
-  font-size: 1.02vw; /* 14px */
+  font-size: 14px;
   color: #222222;
   margin: 0;
   line-height: 1.5;
@@ -145,12 +143,12 @@
   
   #outlook .outlook-calendar .calendar-card {
     height: auto;
-    padding: 3vw;
+    padding: 20px;
   }
   
   #outlook .outlook-calendar .day .tooltip {
     left: 50%;
     transform: translateX(-50%) translateY(-100%);
-    min-width: 80vw;
+    min-width: 280px;
   }
 }

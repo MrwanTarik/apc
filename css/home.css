@@ -2,19 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-.mt-20 {
-  margin-top: 1.46vw; /* 20px */
+@media(min-width: 768px) {
+  .mt-md-20 {
+    margin-top: 20px ;
+  }
 }
 a {
   text-decoration: none;
 }
 .container-fluid {
-  padding: 0 4.39vw; /* 60px */
+  padding: 0 60px;
 }
 header {
   background: transparent linear-gradient(90deg, #F3F3F3 0%, #EDF3F3 100%) 0% 0% no-repeat padding-box;
@@ -23,42 +24,42 @@ header {
 }
 
 header nav .user-info .user-image {
-  width: 2.05vw; /* 28px */
-  height: 2.05vw; /* 28px */
-  margin-right: 0.66vw; /* 9px */
+  width: clamp(28px, 2.04vw, 28px);
+  height: clamp(28px, 2.04vw, 28px);
+  margin-right: clamp(9px, 0.9vw, 9px);
   object-fit: contain;
 }
 header nav .user-info span{
-  font-size: 0.88vw;
-  line-height: 1.46vw; /* 20px */
+  font-size: clamp(12px, 0.87vw, 12px);
+  line-height: 20px ;
   color: #222222;
 }
 header nav .weather-info .city-dropdown {
   border: none;
   background-color: transparent;
-  font-size: 0.73vw;
+  font-size: clamp(10px, 0.73vw, 10px);
   color: #686666;
   border-bottom: 1px solid #686666;
 }
 
 header nav .weather-info span {
-  font-size: 1.32vw;
+  font-size:clamp(18px, 1.317vw, 18px);
   color: #686666;
   font-weight: 700;
-  line-height: 1.61vw; /* 22px */
+  line-height: 22px;
 }
 
 header nav .links {
   display: flex;
-  gap: 2.71vw; /* 37px */
+  gap: clamp(20px, 2.7vw, 37px); 
   align-items: center;
 }
 header nav .links a {
-  font-size: 1.02vw;
-  line-height: 1.46vw; /* 20px */
+  font-size: clamp(9px, 1.02vw, 14px);
+  line-height: 20px;
   color: #222222;
   transition: all 0.3s ease-in-out;
-  padding-bottom: 0.37vw; /* 5px */
+  padding-bottom: 5px;
 }
 header nav .links a:hover {
   color: #FFCA3A;
@@ -71,13 +72,14 @@ header nav .search {
   background-color: transparent;
   border: none;
   outline: none;
-  width: 2.12vw; /* 29px */
-  height: 2.12vw; /* 29px */
+  width: clamp(29px, 2.11vw, 29px);
+  height: clamp(29px, 2.11vw, 29px);
   border-radius: 50%;
   background-color: #FFCA3A;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 header nav .search:hover {
@@ -95,47 +97,49 @@ header nav .search:hover svg path {
 }
 header nav .logo {
   object-fit: contain;
+  position: relative;
+  z-index: 100;
 }
 header nav .logo img {
-  width: 9.81vw; /* 134px / 1366 * 100 */
+  width: clamp(80px, 9.79vw, 134px);
 }
 
 
 
 /* main */
 main {
-  margin-top: 2.2vw; /* 30px */
+  margin-top: clamp(30px, 2.11vw, 30px);
 }
 #hero .department-card {
   background: #F9F9F9 0% 0% no-repeat padding-box;
-  border-radius: 0.95vw; /* 13px */
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0.88vw 0; /* 12px */
+  padding: clamp(12px, 0.87vw, 12px) 0;
   text-align: center;
   height: 100%;
 }
 
 #hero .department-card img {
-  width: 2.71vw; /* 36px / 1366 * 100 */
-  margin-bottom: 0.73vw; /* 10px */
+  /* width: clamp(36px, 2.63vw, 36px); */
+  margin-bottom: clamp(10px, 0.73vw, 10px) ;
 }
 #hero .department-card span {
-  font-size: 1.02vw;
-  padding: 0 1.1vw; /* 15px */
+  font-size: clamp(11px, 1.02vw, 14px);
+  padding: 0 clamp(15px, 1.09vw, 15px);
   color: #222222;
 }
 #hero .announcement-card {
   position: relative;
-  min-height: 18.3vw; /* 250px */
-  padding: 1.76vw 2.93vw 1.17vw; /* 24px 40px 16px */
+  min-height: clamp(250px, 17.86vw, 250px);
+  padding: clamp(24px, 1.72vw, 24px) clamp(25px, 2.92vw, 40px) clamp(16px, 1.14vw, 16px);
   background-image: url(../images/announcment.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  border-radius: 0.95vw; /* 13px */
+  border-radius: 13px;
   height: fit-content;
 }
 #hero .announcement-card::before {
@@ -146,7 +150,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0.95vw; /* 13px */
+  border-radius: 13px;
 }
 #hero .announcement-card .content {
   position: relative;
@@ -154,62 +158,63 @@ main {
   height: 100%;
 }
 #hero .announcement-card h2 {
-  font-size: 1.9vw;
-  line-height: 2.34vw; /* 32px */
+  font-size: clamp(18px, 1.903vw, 26px);
+  line-height: clamp(22px, 2.32vw, 32px);
   font-weight: bold;
   color: #FFCA3C;
-  margin-bottom: 1.32vw; /* 18px */
+  margin-bottom: 0;
+  line-height: 32px;
 }
 #hero .announcement-card span {
-  font-size: 0.88vw;
-  line-height: 2.05vw; /* 28px */
+  font-size: clamp(10px, 0.87vw, 12px);
+  line-height: 28px;
   color: #DCDCDC;
-  margin-bottom: 0.73vw; /* 10px */
+  margin-bottom: clamp(10px, 0.73vw, 10px); 
   display: block;
 }
 #hero .announcement-card p {
-  font-size: 1.02vw;
-  line-height: 1.46vw; /* 20px */
+  font-size: clamp(14px, 1.024vw, 14px);
+  line-height: 20px;
   color: #FDFDFD;
-  margin-bottom: 2.2vw; /* 30px */
+  margin-bottom: clamp(20px, 2.11vw, 30px);
 }
 #hero .announcement-card a  {
   position: absolute;
   bottom:0;
   display: flex;
   align-items: center;
-  font-size: 1.02vw;
+  font-size: clamp(14px, 1.02vw, 14px);
   font-weight: bold;
-  line-height: 1.76vw; /* 24px */
+  line-height: 24px;
   color: #FFFFFF;
   width: fit-content;
   transition: all 0.3s ease-in-out;
 }
 #hero .announcement-card a img {
-  height: 1.02vw; /* 14px */
-  margin: 0 0.07vw; /* 0 1px */
-  width: 0.51vw; /* 7px */
+  height: 14px;
+  margin: 0 clamp(1px, 0.07vw, 1px);
+  width: 7px;
   transition: all 0.3s ease-in-out;
 }
 #hero .announcement-card a:hover  {
-  transform: translateX(0.15vw); /* 2px */
+  transform: translateX(2px);
 }
 #hero .announcement-card a:hover img:nth-child(2) {
-  transform: translateX(0.59vw); /* 8px */
+  transform: translateX(8px);
 }
 #hero .announcement-card a img:nth-child(1) , .all-announcements a img:nth-child(1) {
-  margin-left: 0.73vw; /* 10px */
+  margin-left: clamp(10px, 0.73vw, 10px);
 }
 
 .all-announcements {
- flex: 1;
+ padding: 20px 0;
  display: flex;
  align-items: center;
 }
 .all-announcements a {
-  font-size: 1.24vw;
+  font-size: clamp(14px, 1.24vw, 17px);
   font-weight: bold;
-  line-height: 1.76vw; /* 24px */
+  line-height: 24px;
   color: #FFCA3A;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -220,75 +225,80 @@ main {
 }
 
 .all-announcements a:hover {
-  transform: translateX(-0.59vw); /* -8px */
+  transform: translateX(-8px);
 }
 
 .all-announcements a:hover img:nth-child(2) {
-  transform: translateX(0.59vw); /* 8px */
+  transform: translateX(8px);
 }
 #hero .department-cards {
   background: #F8F8F8 0% 0% no-repeat padding-box;
   border: 1px solid #999999;
-  border-radius: 0.95vw; /* 13px */
-  padding: 2.05vw 1.46vw; /* 28px 20px */
+  border-radius: 13px;
+  padding: clamp(28px, 2.04vw, 28px) clamp(20px, 1.46vw, 20px);
+  margin-top: auto;
 }
 #hero .department-cards img{
-  width: 4.39vw; /* 79px / 1366 * 100 */
-  height: 5.78vw; /* 79px */
-  margin-bottom: 1.46vw; /* 20px */
+  /* width: clamp(38px, 5.76vw, 79px); */
+  height: clamp(38px, 5.76vw, 79px);
+  margin-bottom: clamp(20px, 1.46vw, 20px);
 }
 
 /* outlook */
 #outlook {
-  margin-top: 4.39vw; /* 60px */
+  margin-top: clamp(44px, 4.35vw, 60px);
   background-color: #FFEFE5;
-  padding: 3.66vw 0; /* 50px */
+  padding: clamp(50px, 3.65vw, 50px) 0;
 }
 #outlook .container > .d-flex:first-child {
-  gap: 2.2vw; /* 30px */
+  gap: clamp(30px, 2.11vw, 30px);
 }
 .header-title{
   color: #222222;
-  font-size: 2.63vw;
+  font-size: clamp(24px, 2.63vw, 36px);
   font-weight: 400;
-  margin-bottom: 1.76vw; /* 24px */
+  margin-bottom: clamp(16px, 1.72vw, 24px);
 }
 #outlook .outlook-mails {
   flex:1;
-  margin-right: 1.61vw; /* 22px */
+  margin-right: clamp(22px, 1.61vw, 22px);
 }
 #outlook .outlook-mails .outlook-mails-container {
-  border-top-right-radius: 1.17vw; /* 16px */
-  border-bottom-right-radius: 1.17vw; /* 16px */
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
   border: 1px solid #C8C8C8;
   background-color: #FFFFFF;
 }
 #outlook .outlook-mails .mail-card.active {
-  border-left: 0.37vw solid #FFCA3A;
+  border-left: 5px solid #FFCA3A;
 }
 #outlook .outlook-mails .mail-card{
-  border-left: 0.37vw solid  #C8C8C8;
+  border-left: 5px solid  #C8C8C8;
 }
 #outlook .outlook-mails .mail-card .mail-card-content {
-  padding: 1.24vw 1.24vw 1.24vw 1.1vw; /* 17px 17px 17px 15px */
+  padding: 17px 17px 17px 15px;
   border-bottom: 1px solid #C8C8C8;
-
 }
 #outlook .outlook-mails .mail-card:last-child .mail-card-content {
   border-bottom: none;
 }
-#outlook .outlook-mails .mail-card .mail-card-content h2, #outlook .outlook-mails .mail-card .mail-card-content p {
-  font-size: 1.32vw;
+#outlook .outlook-mails .mail-card .mail-card-content h2 {
+  font-size: clamp(14px, 1.02vw, 14px);
+  font-weight: 400;
+  color: #222222;
+  line-height: clamp(24px, 1.75vw, 24px);
+} 
+#outlook .outlook-mails .mail-card .mail-card-content p {
+  font-size: clamp(12px, 1.317vw, 18px);
   font-weight: bold;
   color: #222222;
-  line-height: 1.76vw; /* 24px */
 }
  
 #outlook .outlook-mails .mail-card .mail-card-content p {
-  padding: 0.73vw 0; /* 10px */
+  padding: 10px 0;
 }
 #outlook .outlook-mails .mail-card .mail-card-content span {
-  font-size: 1.02vw;
+  font-size: clamp(10px, 1.02vw, 14px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -296,9 +306,9 @@ main {
   max-width: 60%;
 }
 #outlook .outlook-mails .mail-card .mail-card-content .mail-date span {
-  font-size: 1.17vw;
+  font-size: clamp(12px, 1.168vw, 16px);
   color: #222222;
-  line-height: 1.76vw; /* 24px */
+  line-height: 24px;
 }
 #outlook .outlook-mails .mail-card.active .mail-card-content .mail-date p, #outlook .outlook-mails .mail-card.active .mail-card-content .mail-date span {
   color: #FFCA3A;
@@ -308,17 +318,17 @@ main {
 
 /* gallery */
 #gallery {
-  margin-top: 4.39vw; /* 60px */
+  margin-top: clamp(40px, 4.35vw, 60px);
 }
 
 /* footer */
 footer {
-  margin-top: 8.42vw; /* 115px */
+  margin-top: clamp(55px, 8.39vw, 115px); 
   background-color: #482C1B;
-  padding: 1.61vw 0; /* 22px */
+  padding: clamp(19px, 1.61vw, 19px) 0;
 }
 footer p, footer .back-to-top span {
-  font-size: 1.02vw;
+  font-size: clamp(14px, 1.02vw, 14px);
   color: white;
 }
 footer .back-to-top {
@@ -344,43 +354,67 @@ footer .back-to-top img {
   }
 }
 
-/* Add a minimum font size for very small screens */
-@media screen and (max-width: 767px) {
- 
-  .container-fluid {
-    padding: 0 3vw;
-  }
-}
 
 @media(max-width: 768px) {
+  
+  header {
+    padding: 12px 0;
+    background: white;
+  }
+  header .d-flex.mt-md-20 {
+    width: fit-content !important;
+  }
   header nav {
     position: relative;
   }
-
+  header nav .links a {
+    font-size: 14px;
+    padding: 18px 25px;
+    width: 100%;
+    border-bottom: 1px solid #99999947;
+  }
+  header nav .links a.active {
+    background-color: #FFCA3A;
+    color: white;
+    border-color: transparent;
+  }
+  #hero .announcement-card a {
+    position: unset;
+  }
   .mobile-menu-btn {
     width: 26px;
-    height: 18px;
     display: flex !important;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     background: none;
     border: none;
     padding: 0;
     z-index: 100;
     position: relative;
-    top: 6px;
   }
 
   .mobile-menu-btn span {
     display: block;
-    width: 100%;
+    width: 26px;
     height: 2px;
     background-color: #FFCA3A;
     transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .mobile-menu-btn.active {
+    gap: 0;
+    height: 26px;
+  }
+
+  .mobile-menu-btn.active span {
+    position: absolute;
+    top: 50%;
   }
 
   .mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg);
+    width: 26px;
   }
 
   .mobile-menu-btn.active span:nth-child(2) {
@@ -388,68 +422,61 @@ footer .back-to-top img {
   }
 
   .mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg);
+    width: 26px;
+  }
+
+  .mobile-menu-btn span:first-child {
+    width: 26px;
   }
 
   header nav .links {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 80%;
-    height: 100vh;
-    background: #F3F3F3;
+    width: 100%;
+    height: auto;
+    background: white;
     flex-direction: column;
-    padding: 70px 20px;
+    padding: 0 0 20px 0;
+    margin-top: 48px;
     transition: left 0.3s ease;
     z-index: 99;
-    gap: 30px;
+    gap: 0;
     align-items: flex-end;
+    visibility: hidden;
+    border-top: 1px solid #999999;
+    box-shadow: 0px 10px 10px #00000012;
   }
 
   header nav .links.active {
     left: 0;
+    background-color: white;
+    visibility: visible;
   }
 
-  header nav .links a {
-    font-size: 15px;
+  @keyframes fadeOut {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: hidden;
+    }
   }
 
-  header nav .search {
-    width: 30px;
-    height: 30px;
+  header nav .links:not(.active) {
+    animation: fadeOut 0.3s forwards;
   }
 
   header nav .user-info ,
   header nav .weather-info {
     z-index: 98;
-
   }
-  header nav .user-info span,
-  header nav .weather-info span, header nav .weather-info .city-dropdown {
-    font-size: 12px;
-  }
-  header nav .user-info .user-image {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
+  
   .d-flex.flex-column.d-md-none {
     position: relative;
     bottom: 16px;
   }
-
-  header nav .logo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 20px;
-  }
-
-  header nav .logo img {
-    width: 80px;
-  }
-
-  /* Add overlay */
   .menu-overlay {
     display: none;
     position: fixed;
@@ -463,5 +490,93 @@ footer .back-to-top img {
 
   .menu-overlay.active {
     display: block;
+  }
+  .container-fluid {
+    padding: 0 25px;
+  }
+  #hero .container-fluid {
+    padding: 0;
+  }
+  main {
+    margin-top: 0;
+  }
+  #hero .announcement-card {
+    border-radius: 0;
+  }
+  #hero .announcement-card::before {
+    border-radius: 0;
+  }
+  .announcement-card:nth-of-type(1) {
+    min-height: 156px !important;
+    height: 156px ;
+  }
+  .announcement-card:nth-of-type(2) {
+    background-image:none ;
+    background-color: white ;
+    min-height: auto !important;
+  }
+  #hero .announcement-card:nth-of-type(2)::before {
+    background-color: white 
+  }
+  #hero .announcement-card p {
+    color: #737373;
+  }
+  #hero .hero-cards {
+    padding: 30px 0 25px;
+    background-color: #F6F6F6;
+  }
+  #hero .department-card {
+    background-color: white;
+  }
+  #outlook .outlook-mails .mail-card .mail-card-content {
+    padding: 17px 15px;
+  }
+  #outlook .outlook-mails .mail-card .mail-card-content p {
+    padding: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 70%;
+  }
+  #outlook .outlook-mails .mail-card .mail-card-content span {
+    max-width: 70%;
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+  #outlook .outlook-mails {
+    margin-right: 0;
+  }
+  .header-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  #outlook {
+    background-color: white;
+    margin-top: 0;
+    padding: 0;
+  }
+  footer .back-to-top {
+    flex-direction: column-reverse;
+    margin-top: 28px;
+  }
+  #hero .department-card span {
+    padding: 0;
+  }
+  #outlook .outlook-mails .mail-card .mail-card-content p {
+    font-size: 14px;
+  }
+  .mobile-search {
+    padding: 18px 25px 0;
+    width: 100%;
+
+  }
+}
+@media(max-width: 480px) {
+  #hero .department-cards .col-3:first-child .department-card {
+    position: relative;
+    top: 8px;
   }
 }

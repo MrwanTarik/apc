@@ -15,9 +15,9 @@
 </head>
 <body>
   <!-- navbar -->
-  <header class="pt-3 pb-2">
-    <nav class="d-flex flex-column container-fluid">
-      <div class="d-md-flex d-none justify-content-between align-items-center">
+  <header class="pt-md-3 pb-md-2">
+    <nav class="d-flex flex-row flex-md-column justify-content-md-start justify-content-between container-fluid align-items-md-start align-items-center">
+      <div class="d-md-flex d-none justify-content-between align-items-center  w-100">
         <div class="d-flex user-info align-items-center">
           <img src="./images/user.png" alt="user" class="user-image">
           <span>Welcome, Adam!</span>
@@ -49,27 +49,15 @@
         <span></span>
         <span></span>
       </button>
-      <div class="d-flex mt-20 justify-content-between align-items-end">
+      <div class="d-flex mt-md-20 justify-content-between align-items-center w-100">
         <div class="links">
-          <a class="active" href="#">Home</a>
-          <a href="#">Procedures</a>
-          <a href="#">Departments</a>
-          <a href="">Events</a>
-          <a href="">Announcements</a>
-          <a href="">Workflows</a>
-          <a href="">Knowledge Center</a>
-          <button class="search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12 12">
-              <path d="M691.043,382.408a4.193,4.193,0,1,1,.745-.7l3.188,3.179-.738.715Zm1.056-3.4a3.515,3.515,0,1,0-3.525,3.524A3.524,3.524,0,0,0,692.1,379.008Z" transform="translate(-683.693 -374.124)" fill="#fff"  stroke-width="1"/>
-            </svg>
-          </button>
-          <div class="d-flex flex-column d-md-none justify-content-between align-items-end">
+          <div style="padding: 10px 25px; border-bottom: 1px solid #99999947;" class="d-flex flex-row d-md-none justify-content-between align-items-center w-100">
             <div class="d-flex user-info align-items-center">
               <img src="./images/user.png" alt="user" class="user-image">
               <span>Welcome, Adam!</span>
             </div>
-            <div class="d-flex gap-1 align-items-center weather-info pt-2 pt-md-0">
-              <div class="city-selector">
+            <div class="d-flex gap-1 align-items-center weather-info ">
+              <div class="city-selector d-flex">
                 <select id="cityDropdown" class="city-dropdown">
                   <option value="212692">Amman</option>
                   <option value="221790">Zarqa</option>
@@ -90,6 +78,22 @@
               <span id="temperature">23º</span>
             </div>
           </div>
+          <a class="active" href="#">Home</a>
+          <a href="#">Procedures</a>
+          <a href="#">Departments</a>
+          <a href="">Events</a>
+          <a href="">Announcements</a>
+          <a href="">Workflows</a>
+          <a href="">Knowledge Center</a>
+          <button  class="search d-none d-md-flex ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12 12">
+              <path d="M691.043,382.408a4.193,4.193,0,1,1,.745-.7l3.188,3.179-.738.715Zm1.056-3.4a3.515,3.515,0,1,0-3.525,3.524A3.524,3.524,0,0,0,692.1,379.008Z" transform="translate(-683.693 -374.124)" fill="#fff"  stroke-width="1"/>
+            </svg>
+          </button>
+          <div class="d-flex d-md-none mobile-search">
+            <input type="text" name="" class="form-control rounded-0" id="">
+          </div>
+          
         </div>
         <a href="#" class="logo">
           <img class="img-fluid" src="./images/icons/logo.svg" alt="logo">
@@ -102,8 +106,8 @@
    <!-- hero -->
    <section id="hero">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-5 row gy-3 gx-4 mt-0">
+      <div class="row flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-5 row gy-3 gx-2 gx-lg-4  mt-0 hero-cards">
           <div class="col-4 mt-0">
             <div class="department-card">
               <img src="./images/icons/department-1.svg" alt="department-1">
@@ -195,19 +199,20 @@
             </div>
           </div>
         </div>
-        <div class="col-7 flex-grow-1 d-flex flex-column">
+        <div class="col-12 col-md-7 flex-grow-1 d-flex flex-column ">
+          <div class="announcement-card d-md-none"></div>
           <div class="announcement-card">
             <div class="content">
               <h2>Invitation to Shareholders of Arab Potash Company PLC</h2>
               <span>21/2/2025</span>
               <p>APC Board of Director is pleased to announce to esteemed shareholders the distribution of dividend for the year 2017.</p>
-              <a href="#">Read more <img src="./images/icons/more-right.svg" alt="more-right"> <img src="./images/icons/more-right.svg" alt="more-right"></a>
+              <a class="d-none d-md-flex" href="#">Read more <img src="./images/icons/more-right.svg" alt="more-right"> <img src="./images/icons/more-right.svg" alt="more-right"></a>
             </div>
           </div>
-          <div class="all-announcements justify-content-end">
+          <div class="all-announcements justify-content-end d-md-flex d-none">
             <a href="#">All announcements <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
           </div>
-          <div class="d-flex department-cards">
+          <div class="d-flex department-cards d-md-flex d-none">
             <div class="col-3">
               <div class="department-card bg-transparent p-0">
                 <img src="./images/icons/department-2.svg" alt="department-2">
@@ -235,9 +240,36 @@
           </div>
         </div>
       </div>
+      <div class="d-flex department-cards d-md-none d-flex border-0 bg-white pb-0">
+        <div class="col-3">
+          <div class="department-card bg-transparent p-0">
+            <img src="./images/icons/department-2.svg" alt="department-2">
+            <span>Sustainability Reports</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="department-card bg-transparent p-0">
+            <img src="./images/icons/department-3.svg" alt="department-3">
+            <span>What is Potash</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="department-card bg-transparent p-0">
+            <img src="./images/icons/department-4.svg" alt="department-4">
+            <span>Creative Ideas</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="department-card bg-transparent p-0">
+            <img src="./images/icons/department-5.svg" alt="department-5">
+            <span>Workflows</span>
+          </div>
+        </div>
+      </div>
     </div>
    </section>
    <!-- outlook -->
+  
    <section id="outlook">
     <div class="container-fluid">
       <div class="row justify-content-between align-items-center">
@@ -275,7 +307,7 @@
               </div>
             </div>
           </div>
-          <div class="all-announcements mt-4">
+          <div class="all-announcements mt-4 d-md-flex d-none">
             <a href="#">Go to Outlook <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
           </div>
         </div>
@@ -285,7 +317,7 @@
             <h2 class="month-header  ">June 2024</h2>
             <div class="calendar" id="calendar"></div>
           </div>
-          <div class="all-announcements mt-4">
+          <div class="all-announcements mt-md-4 justify-content-end justify-content-md-start">
             <a href="#">All events <img src="./images/icons/more-right-y.svg" alt="more-right"> <img src="./images/icons/more-right-y.svg" alt="more-right"></a>
           </div>
         </div>
@@ -303,18 +335,18 @@
     <div class="gallery-modal" id="galleryModal">
       <button class="close-modal">&times;</button>
       <div class="modal-content">
-        <button class="nav-btn prev-btn">&lt;</button>
+        <button class="nav-btn prev-btn"><img style="width: 7px; transform: rotate(180deg);" src="./images/icons/gallery-right.svg" alt="gallery-right"></button>
         <div class="content-container">
           <!-- Content will be inserted here via JavaScript -->
         </div>
-        <button class="nav-btn next-btn">&gt;</button>
+        <button class="nav-btn next-btn"><img style="width: 7px;" src="./images/icons/gallery-right.svg" alt="gallery-right"></button>
       </div>
     </div>
    </section>
    <!-- footer -->
    <footer> 
     <div class="container-fluid">
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
         <p class="mb-0">All Rights Reserved ARAB POTASH © 2025</p>
         <button class="back-to-top d-flex align-items-center gap-2">
           <span class="fw-bold">Back to top</span>
