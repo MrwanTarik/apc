@@ -163,7 +163,6 @@ main {
   font-weight: bold;
   color: #FFCA3C;
   margin-bottom: 0;
-  line-height: 32px;
 }
 #hero .announcement-card span {
   font-size: clamp(10px, 0.87vw, 12px);
