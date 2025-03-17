@@ -24,7 +24,7 @@ class Gallery {
           <img src="${item.thumbnail || item.src}" alt="${item.alt || 'Gallery item'}">
           ${item.type === 'video' ? `
             <button class="play-btn">
-              <img src="./images/icons/play.svg" alt="play">
+              <img src="../images/icons/play.svg" alt="play">
             </button>
           ` : ''}
         </div>

@@ -3,7 +3,7 @@ const API_KEY = "4S4ED83RWxOAdR1NZlrSYocidsyzZ1TQ"
 
 
 // Default to cloudy if icon not found
-const defaultIcon = "./images/weather/cloudy.svg"
+const defaultIcon = "../images/icons/cloudy.svg"
 
 // DOM elements
 const cityDropdown = document.getElementById("cityDropdown")
