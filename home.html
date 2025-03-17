@@ -107,7 +107,8 @@
    <section id="hero">
     <div class="container-fluid">
       <div class="row flex-column-reverse flex-md-row">
-        <div class="col-12 col-md-5 row gy-3 gx-2 gx-lg-4  mt-0 hero-cards">
+        <div class="col-12 col-md-5 row gy-3 gx-2 gx-lg-4 mt-0 hero-cards justify-content-between justify-content-md-start position-relative">
+          <div class="layer d-md-none"></div>
           <div class="col-4 mt-0">
             <div class="department-card">
               <img src="./images/icons/department-1.svg" alt="department-1">
@@ -198,8 +199,11 @@
               <span>Risk Managemant</span>
             </div>
           </div>
+          
         </div>
+        
         <div class="col-12 col-md-7 flex-grow-1 d-flex flex-column ">
+          
           <div class="announcement-card d-md-none"></div>
           <div class="announcement-card">
             <div class="content">
@@ -240,7 +244,10 @@
           </div>
         </div>
       </div>
-      <div class="d-flex department-cards d-md-none d-flex border-0 bg-white pb-0">
+      <div class="d-flex department-cards mobile d-md-none d-flex border-0 bg-white pb-0 position-relative">
+        <button class="show-more-btn position-absolute">
+          <img src="./images/icons/expand.svg" alt="expand">
+        </button>
         <div class="col-3">
           <div class="department-card bg-transparent p-0">
             <img src="./images/icons/department-2.svg" alt="department-2">
@@ -272,12 +279,12 @@
   
    <section id="outlook">
     <div class="container-fluid">
-      <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-between">
         <div class="outlook-mails">
           <h1 class="header-title">Outlook</h1>
-          <div class="outlook-mails-container w-100">
-            <div class="mail-card active">
-              <div class="mail-card-content">
+          <div class="outlook-mails-container w-100 flex-grow-1 d-flex flex-column">
+            <div class="mail-card active flex-grow-1">
+              <div class="mail-card-content w-100">
                 <h2 class="mb-0">John Smith</h2>
                 <div class="d-flex align-items-center justify-content-between mail-date">
                   <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>
@@ -286,8 +293,8 @@
                 <span>APC Board of Director is pleased to announce to esteemed shareholders the distribu...</span>
               </div>
             </div>
-            <div class="mail-card">
-              <div class="mail-card-content">
+            <div class="mail-card flex-grow-1">
+              <div class="mail-card-content w-100">
                 <h2 class="mb-0">John Smith</h2>
                 <div class="d-flex align-items-center justify-content-between mail-date">
                   <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>
@@ -296,8 +303,8 @@
                 <span>APC Board of Director is pleased to announce to esteemed shareholders the distribu...</span>
               </div>
             </div>
-            <div class="mail-card">
-              <div class="mail-card-content">
+            <div class="mail-card flex-grow-1">
+              <div class="mail-card-content w-100">
                 <h2 class="mb-0">John Smith</h2>
                 <div class="d-flex align-items-center justify-content-between mail-date">
                   <p class="mb-0">Invitation to Shareholders of Arab Potash Company PLC</p>

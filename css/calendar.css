@@ -1,9 +1,11 @@
 #outlook .outlook-calendar {
   width: 100%;
-  max-width: 400px; 
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 #outlook .outlook-calendar .calendar-card {
-  height: 375px;
   background: white;
   padding: 20px 20px 23px;
   border-radius: 13px;

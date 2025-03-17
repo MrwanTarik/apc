@@ -259,8 +259,9 @@ main {
   margin-bottom: clamp(16px, 1.72vw, 24px);
 }
 #outlook .outlook-mails {
+  display: flex;
+  flex-direction: column;
   flex:1;
-  margin-right: clamp(22px, 1.61vw, 22px);
 }
 #outlook .outlook-mails .outlook-mails-container {
   border-top-right-radius: 16px;
@@ -521,8 +522,15 @@ footer .back-to-top img {
     color: #737373;
   }
   #hero .hero-cards {
-    padding: 30px 0 25px;
+    padding: 30px 25px 25px;
     background-color: #F6F6F6;
+  }
+  #hero .hero-cards .col-4 {
+    justify-content: space-between;
+    width: 30.333333%;
+  }
+  #hero .hero-cards .department-card span {
+    padding: 0 7px;
   }
   #hero .department-card {
     background-color: white;
@@ -572,10 +580,57 @@ footer .back-to-top img {
     width: 100%;
 
   }
+  .all-announcements a img {
+    height: 10px;
+  }
+
+  .hero-cards {
+    height: 300px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    position: relative;
+  }
+
+  .layer {
+    background: transparent linear-gradient(180deg, #FFFFFF00 0%, #FFFFFF 80%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .hero-cards.expanded .layer {
+    opacity: 0;
+  }
+  .show-more-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    height: fit-content;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .show-more-btn img {
+    height: auto !important; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  #hero .department-cards.mobile {
+    padding-top: 55px;
+  }
+
 }
+
 @media(max-width: 480px) {
   #hero .department-cards .col-3:first-child .department-card {
     position: relative;
     top: 8px;
   }
 }
+
+
