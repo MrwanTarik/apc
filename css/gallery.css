@@ -162,7 +162,7 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #media .gallery-container {
     flex-wrap: nowrap;
     overflow-x: auto;

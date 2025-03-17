@@ -410,11 +410,12 @@ footer .back-to-top img {
   animation: float 2s ease-in-out infinite;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
   
   header {
     padding: 12px 0;
     background: white;
+    transform: unset !important;
   }
   header .d-flex.mt-md-20 {
     width: fit-content !important;
