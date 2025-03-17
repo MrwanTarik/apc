@@ -1,0 +1,156 @@
+#outlook .outlook-calendar {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+#outlook .outlook-calendar .calendar-card {
+  background: white;
+  padding: 20px 20px 23px;
+  border-radius: 13px;
+  border: 1px solid #999999;
+  background: #F8F8F8 0% 0% no-repeat padding-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+#outlook .outlook-calendar .month-header {
+  font-size: clamp(24px, 2.19vw, 30px);
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+#outlook .outlook-calendar .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+/* Day styles */
+#outlook .outlook-calendar .weekday {
+  color: #884C28;
+  font-size: clamp(10px, 1.09vw, 15px);
+  padding: 5px;
+}
+
+#outlook .outlook-calendar .day {
+  cursor: default;  /* Keep the default cursor since it's not clickable */
+  transition: all 0.3s ease;  /* Smooth transition for hover effect */
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  padding-bottom: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+#outlook .outlook-calendar .day span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 1.02vw, 14px); 
+}
+
+#outlook .outlook-calendar .day.inactive,
+#outlook .outlook-calendar .day.next-month,
+#outlook .outlook-calendar .day.weekend {
+  color: #ACAAAA;
+}
+
+#outlook .outlook-calendar .day.selected {
+  background: #FFCA3A;
+  color: #FFFFFF;
+}
+
+#outlook .outlook-calendar .day.current-day {
+  background: white;
+  color: black;
+}
+
+#outlook .outlook-calendar .day.current-day:hover {
+  background: #f5f5f5;  
+}
+
+#outlook .outlook-calendar .day.has-events {
+  background: #FFCA3A;
+  color: #FFFFFF;
+}
+
+#outlook .outlook-calendar .day.has-events:hover {
+  background: #ffb300;  
+}
+
+#outlook .outlook-calendar .day:not(.inactive):not(.next-month):not(.has-events):not(.current-day):hover {
+  background: #f0f0f0; 
+}
+
+#outlook .outlook-calendar .day:hover {
+  z-index: 2;  /* Ensure the hovered day is above others */
+}
+
+/* Add these tooltip styles */
+#outlook .outlook-calendar .day {
+  position: relative;
+}
+
+#outlook .outlook-calendar .day .tooltip {
+  position: absolute;
+  left: -267px;
+  top: 120px;
+  transform: translateY(-100%);
+  background: white;
+  padding: 15px;
+  border-radius: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+#outlook .outlook-calendar .day .tooltip img {
+  color: #222222;
+}
+
+#outlook .outlook-calendar .day .tooltip h3 {
+  font-size: 16px;
+  color: #FFCA3A;  /* Match the yellow color from the design */
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+#outlook .outlook-calendar .day .tooltip p {
+  font-size: 14px;
+  color: #222222;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#outlook .outlook-calendar .day.has-events:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Remove the arrow pointer since it's not in the design */
+#outlook .outlook-calendar .day .tooltip::after {
+  display: none;
+}
+
+/* Add responsive behavior for smaller screens */
+@media screen and (max-width: 768px) {
+  #outlook .outlook-calendar {
+    max-width: 100%;
+  }
+  
+  #outlook .outlook-calendar .calendar-card {
+    height: auto;
+    padding: 20px;
+  }
+  
+  #outlook .outlook-calendar .day .tooltip {
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    min-width: 280px;
+  }
+}
