@@ -250,6 +250,9 @@ main {
   background-color: #FFEFE5;
   padding: clamp(50px, 3.65vw, 50px) 0;
 }
+#outlook .all-announcements {
+  padding: 0;
+}
 #outlook .container > .d-flex:first-child {
   gap: clamp(30px, 2.11vw, 30px);
 }
